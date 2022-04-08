@@ -26,7 +26,7 @@ const preload = () => {
   for (let i = 0; i < 8; i++) {
     for (let j = 0; j < 8; j++) {
       col.push(
-        `<input type="button" onclick='click1(${i},${j})' id='btn${i},${j}' class='btn btn-outline-primary p-md-3 m-md-1 rounded-circle' value=${i},${j} />`
+        `<input type="button" onclick='click1(${i},${j})' id='btn${i},${j}' class='btn btn-outline-primary btn-sm p-md-3 m-md-1 rounded-circle' value=${i},${j} />`
       );
     }
     col.push("<br/>");

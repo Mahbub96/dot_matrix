@@ -3,7 +3,7 @@ const code = document.querySelector(".code");
 const btn = document.querySelector(".btn");
 
 let generateCode =
-  "A SEGMENT PARA PUBLIC 'CODE'\n ASSUME CS A \n ORG 1000H \n S:\n MOV AL,80H\n OUT 1EH,AL ;CR \n B:\n MOV AL,00H\n OUT 1CH,AL ;PORT C\n \n MOV AL,0FFH \n OUT 18H,AL ;PORT A \n OUT 1BH,AL ;PORT B\n\n ";
+  "A SEGMENT PARA PUBLIC 'CODE'\n ASSUME CS: A \n ORG 1000H \n S:\n MOV AL, 80H\n OUT 1EH,AL ;CR \n B:\n MOV AL, 00H\n OUT 1CH,AL ;PORT C\n \n MOV AL, 0FFH \n OUT 18H,AL ;PORT A \n OUT 1BH,AL ;PORT B\n\n C:\n";
 
 const generateCodeForRow = (val) => {
   let v = `;---------\nMOV AL,${val.a}H \nOUT 18H,AL ; PORT A OFF   \n\n MOV AL,${val.b}H ; RED LIGHT\nOUT 1AH,AL ;PORT B \n\nMOV AL,${val.c}H\nOUT 1CH,AL ;PORT C\n MOV AL,00H\nOUT 1CH,AL ;PORT C TURN OFF \n`;
@@ -63,7 +63,6 @@ const valGen = (tempB, tempC) => {
     .padStart(2, "0")
     .toUpperCase();
 
-  console.log(a, b, c);
   return { a, b, c };
 };
 
